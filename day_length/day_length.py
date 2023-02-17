@@ -166,7 +166,6 @@ if st.session_state.city:
 
     st.write('Day length changing:')
     df['day_length_chng'] = df.day_length.rolling(window=2).apply(lambda x: x[1] - x[0])
-    df.to_clipboard()
     st.area_chart(df.day_length_chng)
 
     if city_two:
